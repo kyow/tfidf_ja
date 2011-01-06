@@ -15,14 +15,18 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tfidf_ja"
   gem.homepage = "http://github.com/kyow/tfidf_ja"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{one-line summary of your gem}
+  gem.description = %Q{longer description of your gem}
   gem.email = "24signals@gmail.com"
   gem.authors = ["K.Nishi"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  
+  gem.files = Rake::FileList.new('lib/**/*.rb', '[A-Z]*', 'dic/idf.dic')
+  gem.required_rubygems_version = ">1.3.6"
+  gem.rdoc_options << '-c UTF-8' << '-S' << '-U'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
