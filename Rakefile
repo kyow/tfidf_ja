@@ -15,8 +15,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tfidf_ja"
   gem.homepage = "http://github.com/kyow/tfidf_ja"
   gem.license = "MIT"
-  gem.summary = %Q{one-line summary of your gem}
-  gem.description = %Q{longer description of your gem}
+  gem.summary = %Q{Computes TF-IDF with Japanese dictionary.}
+  gem.description = %Q{
+    tfidf_ja computes TF-IDF with a dictionary.
+    This gem include a Japanese IDF dictionary that were prepared in Yahoo! API.
+  }
   gem.email = "24signals@gmail.com"
   gem.authors = ["K.Nishi"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
@@ -24,8 +27,13 @@ Jeweler::Tasks.new do |gem|
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
   
+  # include files
   gem.files = Rake::FileList.new('lib/**/*.rb', '[A-Z]*', 'dic/idf.dic')
+  
+  # required gems version
   gem.required_rubygems_version = ">1.3.6"
+  
+  # for RDoc encoding
   gem.rdoc_options << '-c UTF-8' << '-S' << '-U'
 end
 Jeweler::RubygemsDotOrgTasks.new
