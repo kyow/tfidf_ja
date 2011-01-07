@@ -27,6 +27,9 @@ Jeweler::Tasks.new do |gem|
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
   
+  # gems dependency
+  gem.add_runtime_dependency 'igo-ruby', '> 0.1'
+  
   # include files
   gem.files = Rake::FileList.new('lib/**/*.rb', '[A-Z]*', 'dic/idf.dic')
   

@@ -9,8 +9,11 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.6") if s.respond_to? :required_rubygems_version=
   s.authors = ["K.Nishi"]
-  s.date = %q{2011-01-07}
-  s.description = %q{longer description of your gem}
+  s.date = %q{2011-01-08}
+  s.description = %q{
+    tfidf_ja computes TF-IDF with a dictionary.
+    This gem include a Japanese IDF dictionary that were prepared in Yahoo! API.
+  }
   s.email = %q{24signals@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -34,7 +37,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["-c UTF-8", "-S", "-U"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{one-line summary of your gem}
+  s.summary = %q{Computes TF-IDF with Japanese dictionary.}
   s.test_files = [
     "spec/spec_helper.rb",
     "spec/tfidf_ja_spec.rb",
@@ -51,17 +54,20 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.1"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_runtime_dependency(%q<igo-ruby>, ["> 0.1"])
     else
       s.add_dependency(%q<rspec>, ["~> 2.1.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.1"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<igo-ruby>, ["> 0.1"])
     end
   else
     s.add_dependency(%q<rspec>, ["~> 2.1.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.1"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<igo-ruby>, ["> 0.1"])
   end
 end
 
