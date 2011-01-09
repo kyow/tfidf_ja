@@ -62,4 +62,6 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "tfidf_ja #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+  
+  rdoc.options << '-c UTF-8' << '-S' << '-U'
 end
