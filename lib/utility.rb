@@ -1,20 +1,19 @@
 # coding: utf-8
 #
-#Copyright:: Copyright (c) kyow, 2011
-#Authors:: K.Nishi
+# Copyright:: Copyright (c) kyow, 2011
+# Authors:: K.Nishi
 
 $:.unshift(File.dirname(__FILE__))
 require 'dictionary'
 
-#
-#
-#
 module TfIdf
   #
-  # ユーティリティ
+  # ユーティリティクラス
   #
   class Utility
-  N = 20000000000
+    # (仮の)インデックス数
+    N = 20000000000
+    
     # df.dicからidf.dicを生成する
     def self.create_dic
       dfs = self.df_load()
@@ -24,12 +23,17 @@ module TfIdf
       puts "size=#{idfs.size} average=#{idfs.average}"
     end
     
+    # DF値からiDF値を取得する
+    # IDF = log(N / DF)
+    # df_value:: DF値
     def self.get_inverse(df_value)
       return df_value > 0 ? Math::log(N / df_value) : 0
     end
     
     private
     
+    # DFsオブジェクトからIDFsオブジェクトを生成する
+    # dfs:: DFsオブジェクト
     def self.create_idf(dfs)
       idfs = IDFs.new
       total = 0
@@ -43,6 +47,7 @@ module TfIdf
       return idfs
     end
     
+    # df.dicを読み込む
     def self.df_load()
       df_dic  = File.dirname(__FILE__) + '/../dic/df.dic'
       unless File::exists?(df_dic)
@@ -53,6 +58,7 @@ module TfIdf
       }
     end
     
+    # idf.dicを保存する
     def self.idf_save(idfs)
       idf_dic  = File.dirname(__FILE__) + '/../dic/idf.dic'
       File::open(idf_dic, 'wb') { |f|

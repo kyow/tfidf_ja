@@ -1,18 +1,15 @@
 # coding: utf-8
 #
-#Copyright:: Copyright (c) kyow, 2011
-#Authors:: K.Nishi
+# Copyright:: Copyright (c) kyow, 2011
+# Authors:: K.Nishi
 
 $:.unshift(File.dirname(__FILE__))
 
 require 'dictionary'
 
-#
-#
-#
 module TfIdf
   #
-  #
+  # 日本語辞書を使用してTFIDFを算出するクラス
   #
   class Ja
     # コンストラクタ
@@ -21,13 +18,14 @@ module TfIdf
       reset
     end
     
+    # インスタンスのリセット
     def reset
       @tfs = {}
     end
     
-    #
-    #words:: 形態素配列
-    #:: 
+    # TF-IDFを算出する
+    # words:: 形態素配列
+    # return:: key = 形態素、value = TF-IDF値のハッシュテーブル
     def tfidf(words)
       tfidfs = {}
       set_tf_map(words)
@@ -37,6 +35,9 @@ module TfIdf
       return tfidfs
     end
     
+    # IDFを取得する
+    # word:: 形態素
+    # return:: IDF
     def idf(word)
       idf = @idfs.get(word)
       if(idf.nil?)
