@@ -1,6 +1,6 @@
 = tfidf_ja
 
-tfidf_jaは与えられた単語の配列の{TF-IDF}[http://ja.wikipedia.org/wiki/Tf-idf]を算出し、単語をキー、TF-IDF値をバリューとするハッシュテーブルを返却するライブラリです。
+tfidf_jaは与えられた単語の配列の {TF-IDF}[http://ja.wikipedia.org/wiki/Tf-idf] を算出し、単語をキー、TF-IDF値をバリューとするハッシュテーブルを返却するライブラリです。
 
 == 特徴
 
