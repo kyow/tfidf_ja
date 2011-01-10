@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tfidf_ja}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.6") if s.respond_to? :required_rubygems_version=
   s.authors = ["K.Nishi"]
-  s.date = %q{2011-01-08}
+  s.date = %q{2011-01-11}
   s.description = %q{
     tfidf_ja computes TF-IDF with a dictionary.
     This gem include a Japanese IDF dictionary that were prepared in Yahoo! API.
