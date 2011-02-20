@@ -6,6 +6,8 @@
 require 'rubygems'
 require 'tfidf_ja'
 
+puts "version = #{TfIdf::Version.tfidf_ja}"
+
 def output(h)
   h.each { |item|
     puts "#{item[0]} => #{item[1]}"
@@ -13,6 +15,7 @@ def output(h)
 end
 
 tfidf = TfIdf::Ja.new
+
 puts "-->1回目"
 output tfidf.tfidf(['この', '文章', 'から', 'TFIDF', '値', 'を', '取得', 'する'])
 puts "-->2回目"
