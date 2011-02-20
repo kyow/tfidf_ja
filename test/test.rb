@@ -5,7 +5,6 @@
 
 require 'rubygems'
 require 'tfidf_ja'
-require 'tfidf_ja/igo_extension'
 
 def output(h)
   h.each { |item|
