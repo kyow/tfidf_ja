@@ -1,6 +1,6 @@
 # coding: utf-8
 #
-# Copyright:: Copyright (c) kyow, 2010
+# Copyright:: Copyright (c) kyow, 2011
 # Authors:: K.Nishi
 
 module TfIdf
