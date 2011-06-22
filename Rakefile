@@ -31,7 +31,7 @@ Jeweler::Tasks.new do |gem|
 # gem.add_runtime_dependency 'igo-ruby', '> 0.1'
   
   # include files
-  gem.files = Rake::FileList.new('lib/**/*.rb', '[A-Z]*', 'dic/idf.dic')
+  gem.files = Rake::FileList.new('lib/**/*.rb', '[A-Z]*', 'dic/**/idf.dic')
   
   # required gems version
   gem.required_rubygems_version = ">1.3.6"
