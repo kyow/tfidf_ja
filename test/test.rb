@@ -1,10 +1,11 @@
 # coding: utf-8
-#
+# 
 #Copyright:: Copyright (c) kyow, 2011
 #Authors:: K.Nishi
 
 require 'rubygems'
-require 'tfidf_ja'
+#require 'tfidf_ja'
+require File.dirname(__FILE__) + '/../lib/tfidf_ja'
 
 puts "version = #{TfIdf::Version.tfidf_ja}"
 

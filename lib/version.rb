@@ -13,5 +13,10 @@ module TfIdf
       }
       return version
     end
+    
+    #Rubyのバージョンを取得する
+    def self.ruby
+      return RUBY_VERSION.slice(0, 3)
+    end
   end
 end

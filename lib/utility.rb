@@ -49,7 +49,7 @@ module TfIdf
     
     # df.dicを読み込む
     def self.df_load()
-      df_dic  = File.dirname(__FILE__) + '/../dic/df.dic'
+      df_dic  = File.dirname(__FILE__) + '/../dic/#{Version.ruby}/df.dic'
       unless File::exists?(df_dic)
         raise
       end
@@ -60,7 +60,7 @@ module TfIdf
     
     # idf.dicを保存する
     def self.idf_save(idfs)
-      idf_dic  = File.dirname(__FILE__) + '/../dic/idf.dic'
+      idf_dic  = File.dirname(__FILE__) + '/../dic/#{Version.ruby}/idf.dic'
       File::open(idf_dic, 'wb') { |f|
         Marshal.dump(idfs, f)
       }
