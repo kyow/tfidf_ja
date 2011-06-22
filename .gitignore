@@ -42,4 +42,4 @@ pkg
 #*.swp
 
 # For IDF Dictionary
-*.dic
+# *.dic
